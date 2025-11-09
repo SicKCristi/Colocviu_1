@@ -20,8 +20,8 @@
         app:layout_constraintVertical_bias="0.084">
         >
 
-        <EditText
-            android:id="@+id/EditTest1"
+        <TextView
+            android:id="@+id/input1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
@@ -31,10 +31,10 @@
             android:enabled="false"
             android:gravity="center"
             android:inputType="text"
-            android:saveEnabled="false" />
+            android:saveEnabled="true" />
 
-        <EditText
-            android:id="@+id/EditTest2"
+        <TextView
+            android:id="@+id/input2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
@@ -44,10 +44,10 @@
             android:enabled="false"
             android:gravity="center"
             android:inputType="text"
-            android:saveEnabled="false" />
+            android:saveEnabled="true" />
 
-        <EditText
-            android:id="@+id/EditTest3"
+        <TextView
+            android:id="@+id/input3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -57,10 +57,10 @@
             android:enabled="false"
             android:gravity="center"
             android:inputType="text"
-            android:saveEnabled="false" />
+            android:saveEnabled="true" />
 
-        <EditText
-            android:id="@+id/EditTest4"
+        <TextView
+            android:id="@+id/input4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -70,12 +70,12 @@
             android:enabled="false"
             android:gravity="center"
             android:inputType="text"
-            android:saveEnabled="false" />
+            android:saveEnabled="true" />
 
     </GridLayout>
 
     <Button
-        android:id="@+id/Buton1"
+        android:id="@+id/sum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -86,7 +86,7 @@
         app:layout_constraintTop_toBottomOf="@id/gridLayout" />
 
     <Button
-        android:id="@+id/Buton2"
+        android:id="@+id/prod"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"

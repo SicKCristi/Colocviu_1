@@ -9,8 +9,8 @@ android {
 
     defaultConfig {
         applicationId = "ro.pub.cs.systems.eim.practicaltest01var07"
-        minSdk = 24
-        targetSdk = 36
+        minSdk = 30
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
@@ -42,6 +42,8 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.material3)
+    implementation(libs.androidx.compose.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

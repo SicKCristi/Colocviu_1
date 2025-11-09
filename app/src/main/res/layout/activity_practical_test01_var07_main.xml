@@ -18,10 +18,10 @@
         android:columnCount="2">
 
         <EditText
-            android:id="@+id/EditTest1"
+            android:id="@+id/EditText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:saveEnabled="false"
+            android:saveEnabled="true"
             android:inputType="text"
             android:ems="6"
             android:layout_row="0"
@@ -30,10 +30,10 @@
             android:gravity="center"/>
 
         <EditText
-            android:id="@+id/EditTest2"
+            android:id="@+id/EditText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:saveEnabled="false"
+            android:saveEnabled="true"
             android:inputType="text"
             android:ems="6"
             android:layout_row="0"
@@ -42,10 +42,10 @@
             android:gravity="center" />
 
         <EditText
-            android:id="@+id/EditTest3"
+            android:id="@+id/EditText3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:saveEnabled="false"
+            android:saveEnabled="true"
             android:inputType="text"
             android:ems="6"
             android:layout_row="1"
@@ -54,10 +54,10 @@
             android:gravity="center"/>
 
         <EditText
-            android:id="@+id/EditTest4"
+            android:id="@+id/EditText4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:saveEnabled="false"
+            android:saveEnabled="true"
             android:inputType="text"
             android:ems="6"
             android:layout_row="1"
