@@ -4,10 +4,10 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2025-11-09T15:35:32.261132600Z">
+        <DropdownSelection timestamp="2025-11-09T16:57:25.426306400Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\crist\.android\avd\Lineageos-EIM1.avd" />
+              <DeviceId pluginId="PhysicalDevice" identifier="serial=ZY22G5H7W9" />
             </handle>
           </Target>
         </DropdownSelection>

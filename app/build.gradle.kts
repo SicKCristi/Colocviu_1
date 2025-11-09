@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "ro.pub.cs.systems.eim.practicaltest01var07"
-        minSdk = 30
+        minSdk = 34
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"

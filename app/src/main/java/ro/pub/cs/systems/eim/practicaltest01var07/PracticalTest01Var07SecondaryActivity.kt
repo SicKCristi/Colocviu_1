@@ -2,10 +2,8 @@ package ro.pub.cs.systems.eim.practicaltest01var07
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import java.lang.Character.toString
 
 class PracticalTest01Var07SecondaryActivity : AppCompatActivity() {
 
@@ -39,20 +37,20 @@ class PracticalTest01Var07SecondaryActivity : AppCompatActivity() {
 
         // Calculam suma
         val sum=findViewById<TextView>(R.id.sum)
-        sum.setOnClickListener {
+        sum.setOnClickListener{
             val result=in1+in2+in3+in4
-            val intent= Intent()
-            intent.putExtra("result",toString(result))
+            val intent=Intent()
+            intent.putExtra("result",result.toString())
             setResult(RESULT_OK,intent)
             finish();
         }
 
         // Calculam produsul
         val prod=findViewById<TextView>(R.id.prod)
-        prod.setOnClickListener {
+        prod.setOnClickListener{
             val result=in1*in2*in3*in4
-            val intent= Intent()
-            intent.putExtra("result",toString(result))
+            val intent=Intent()
+            intent.putExtra("result",result.toString())
             setResult(RESULT_OK,intent)
             finish();
         }

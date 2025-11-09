@@ -22,9 +22,29 @@ class PracticalTest01Var07MainActivity : AppCompatActivity() {
     private lateinit var input3: EditText
     private lateinit var input4: EditText
 
+    private val messageBroadcastReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context?, intent: Intent?) {
+            intent?.let {
+                val n1=intent.getIntExtra("n1",0);
+                val n2=intent.getIntExtra("n2",0);
+                val n3=intent.getIntExtra("n3",0);
+                val n4=intent.getIntExtra("n4",0);
+
+                input1.setText(n1.toString())
+                input2.setText(n2.toString())
+                input3.setText(n3.toString())
+                input4.setText(n4.toString())
+            }
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_practical_test01_var07_main)
+
+        val serviceIntent=Intent(this, PracticalTest01Service::class.java)
+        startService(serviceIntent)
 
         // Asocierea dintre variabilele input si EditText-ele definite in interfata
         input1 = findViewById(R.id.EditText1)
@@ -42,8 +62,7 @@ class PracticalTest01Var07MainActivity : AppCompatActivity() {
                             this,
                             "The activity returned with result OK",
                             Toast.LENGTH_LONG
-                        )
-                            .show()
+                        ).show()
                     }
                 }
             }
@@ -61,4 +80,26 @@ class PracticalTest01Var07MainActivity : AppCompatActivity() {
             activityResultsLauncher.launch(intent)
         }
     }
+
+    override fun onResume() {
+        super.onResume()
+        val filter = IntentFilter("ProcessingThread")
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            registerReceiver(messageBroadcastReceiver, filter, RECEIVER_EXPORTED)
+        } else {
+            registerReceiver(messageBroadcastReceiver, filter)
+        }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        unregisterReceiver(messageBroadcastReceiver)
+    }
+
+    override fun onDestroy() {
+        val intent = Intent(applicationContext, PracticalTest01Service::class.java)
+        applicationContext.stopService(intent)
+        super.onDestroy()
+    }
+
 }
